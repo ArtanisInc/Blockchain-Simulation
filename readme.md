@@ -11,7 +11,6 @@ Key features of this simulation include:
 
 This project is an **educational tool** designed for learning and experimentation with blockchain principles in Python.
 
----
 
 ## ✨ Features
 
@@ -20,7 +19,11 @@ This project is an **educational tool** designed for learning and experimentatio
 - **Blockchain Simulation**: Supports multiple peers contributing to the chain with simulated mining.
 - **Corruption Simulation**: Allows for testing the blockchain's response when a block is corrupted manually.
 
----
+
+## 📦 Requirements
+
+Ensure you have Python 3 installed.
+
 
 ## 🚀 Usage
 
@@ -47,7 +50,7 @@ Replace `<peer_index>` with the index of the peer (0, 1, 2...) and `<block_index
 python blockchain.py -corrupt 0 2
 ```
 
----
+
 
 ## 🖥️ Expected Output
 
@@ -73,6 +76,7 @@ Blockchain before corruption:
         "miner": "Peer A"
     }
 ]
+Corrupting blockchain for Peer A at block 1.
 
 Blockchain after corruption:
 [
@@ -95,26 +99,22 @@ Blockchain after corruption:
 Blockchain valid: False
 ```
 
----
 
 ## ⚙️ Customization
 
 - **Adjust Proof of Work Difficulty**: Modify the `proof_of_work` function to change the number of leading zeros required for a valid proof (currently set to 5).
 - **Add More Peers**: Expand the list of peers in the simulation by adding more entries to the `peers` list in the script.
 
----
 
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to improve or expand the project, feel free to fork the repository and submit a pull request with your changes.
 
----
 
 ## 📧 Contact
 
 For any questions or suggestions, feel free to open an issue or contact via GitHub.
 
----
 
 ## 📜 License
 
