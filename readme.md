@@ -1,7 +1,7 @@
 # 🔗 Blockchain Simulation
 
 ## Overview
-The **Blockchain Simulation**  is a Python-based project developed as part of a course in Master's in Network and Systems Architecture. This project demonstrates the fundamentals of a blockchain, implementing a simple version with a Proof of Work mechanism, the ability to add blocks, and basic chain validation. It serves as an educational tool for understanding how decentralized and immutable systems work.
+The **Blockchain Simulation**  is a Python-based project developed as part of a course. This project demonstrates the fundamentals of a blockchain, implementing a simple version with a Proof of Work mechanism, the ability to add blocks, and basic chain validation. It serves as an educational tool for understanding how decentralized and immutable systems work.
 
 Key features of this simulation include:
 - **Block creation** with a Proof of Work algorithm.
