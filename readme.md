@@ -9,8 +9,6 @@ Key features of this simulation include:
 - **Optional corruption simulation** to observe how the system detects tampering.
 - **Peer-based mining simulation**, where each peer can contribute blocks to the chain.
 
-This project is an **educational tool** designed for learning and experimentation with blockchain principles in Python.
-
 
 ## ✨ Features
 
