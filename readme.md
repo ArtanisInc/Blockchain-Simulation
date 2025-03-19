@@ -62,7 +62,6 @@ Blockchain before corruption:
         "proof": 1,
         "previous_hash": "0",
         "miner": "Genesis",
-<<<<<<< HEAD
         "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
     },
     {
@@ -72,7 +71,6 @@ Blockchain before corruption:
         "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
         "miner": "Peer A",
         "current_hash": "920e9dacd99126a3de7c2277566ee799005d54b3ede4921c7f94776a014f2fe9"
-=======
         "transactions": ["Genesis Block"],
         "merkle_root": "abcdef12345..."
     },
@@ -84,7 +82,6 @@ Blockchain before corruption:
         "miner": "Peer A",
         "transactions": ["Alice pays Bob 5 BTC"],
         "merkle_root": "xyz12345..."
->>>>>>> 93c522b (Added 'merkle_root()' and 'proof_of_work()')
     }
 ]
 Corrupting blockchain for Peer A at block 2.
@@ -97,7 +94,6 @@ Blockchain after corruption:
         "proof": 1,
         "previous_hash": "0",
         "miner": "Genesis",
-<<<<<<< HEAD
         "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
     },
     {
@@ -107,7 +103,6 @@ Blockchain after corruption:
         "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
         "miner": "Peer A",
         "current_hash": "03479147053e8f6192096c60632276fdc0b81168305e408891d0629dc40a36b5"
-=======
         "transactions": ["Genesis Block"],
         "merkle_root": "abcdef12345..."
     },
@@ -119,7 +114,6 @@ Blockchain after corruption:
         "miner": "Peer A",
         "transactions": ["Tampered Transaction"],
         "merkle_root": "tampered12345..."
->>>>>>> 93c522b (Added 'merkle_root()' and 'proof_of_work()')
     }
 ]
 Blockchain is invalid. Corruption detected at block(s): [2]
