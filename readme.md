@@ -68,7 +68,7 @@ Blockchain before corruption:
         "merkle_root": "abcdef12345..."
     },
     {
-        "index": 2,
+        "index": 3,
         "timestamp": "2025-03-02 10:24:10.789123",
         "proof": 23456,
         "previous_hash": "abcdef12345...",
@@ -100,7 +100,7 @@ Blockchain after corruption:
         "merkle_root": "abcdef12345..."
     },
     {
-        "index": 2,
+        "index": 3,
         "timestamp": "2025-03-02 10:24:10.789123",
         "proof": 9999,
         "previous_hash": "abcdef12345...",
