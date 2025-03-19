@@ -61,17 +61,19 @@ Blockchain before corruption:
 [
     {
         "index": 1,
-        "timestamp": "2025-03-02 10:23:42.456789",
-        "proof": 12345,
+        "timestamp": "2025-03-19 09:59:39.462860",
+        "proof": 1,
         "previous_hash": "0",
-        "miner": "Genesis"
+        "miner": "Genesis",
+        "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
     },
     {
         "index": 2,
-        "timestamp": "2025-03-02 10:24:10.789123",
-        "proof": 23456,
-        "previous_hash": "abcdef12345...",
-        "miner": "Peer A"
+        "timestamp": "2025-03-19 09:59:41.103788",
+        "proof": 632238,
+        "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
+        "miner": "Peer A",
+        "current_hash": "920e9dacd99126a3de7c2277566ee799005d54b3ede4921c7f94776a014f2fe9"
     }
 ]
 Corrupting blockchain for Peer A at block 1.
@@ -80,17 +82,19 @@ Blockchain after corruption:
 [
     {
         "index": 1,
-        "timestamp": "2025-03-02 10:23:42.456789",
-        "proof": 12345,
+        "timestamp": "2025-03-19 09:59:39.462860",
+        "proof": 1,
         "previous_hash": "0",
-        "miner": "Genesis"
+        "miner": "Genesis",
+        "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
     },
     {
         "index": 2,
-        "timestamp": "2025-03-02 10:24:10.789123",
+        "timestamp": "2025-03-19 09:59:41.103788",
         "proof": 12345,
-        "previous_hash": "abcdef12345...",
-        "miner": "Peer A"
+        "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
+        "miner": "Peer A",
+        "current_hash": "03479147053e8f6192096c60632276fdc0b81168305e408891d0629dc40a36b5"
     }
 ]
 
