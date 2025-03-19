@@ -3,13 +3,6 @@
 ## Overview
 The **Blockchain Simulation** is a Python-based project developed to demonstrate the fundamentals of a blockchain. This project implements a simple blockchain with a Proof of Work mechanism, the ability to add blocks, Merkle root validation, and basic chain validation. It serves as an educational tool for understanding decentralized and immutable systems.
 
-Key features of this simulation include:
-- **Block creation** with a Proof of Work algorithm.
-- **Blockchain validation** to ensure the integrity of the chain.
-- **Merkle Root calculation** for transaction integrity verification.
-- **Optional corruption simulation** to observe how the system detects tampering.
-- **Peer-based mining simulation**, where each peer contributes blocks to the chain.
-
 ## ✨ Features
 
 - **Proof of Work (PoW)**: Implements a mining process where a valid proof is found by solving a computational puzzle.
