@@ -118,15 +118,9 @@ Blockchain valid: False
 - **Adjust Proof of Work Difficulty**: Modify the `difficulty` parameter in the `Blockchain` class to change the mining difficulty.
 - **Add More Peers**: Expand the list of peers in the simulation by adding more entries to the `peers` list in the script.
 
-## 🤝 Contributing
 
-Contributions are welcome! If you'd like to improve or expand the project, feel free to fork the repository and submit a pull request with your changes.
-
-## 💎 Contact
-
-For any questions or suggestions, feel free to open an issue or contact via GitHub.
-
-## 📚 License
+## 📄 License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
 
