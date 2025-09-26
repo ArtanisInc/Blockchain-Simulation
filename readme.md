@@ -1,126 +1,104 @@
-# 🔗 Blockchain Simulation
+# Blockchain Simulation - Exercice de Formation
 
-## Overview
-The **Blockchain Simulation** is a Python-based project developed to demonstrate the fundamentals of a blockchain. This project implements a simple blockchain with a Proof of Work mechanism, the ability to add blocks, Merkle root validation, and basic chain validation. It serves as an educational tool for understanding decentralized and immutable systems.
+Ce projet est un exercice de formation qui implémente une simulation éducative de blockchain en Python pour comprendre les principes fondamentaux de cette technologie.
 
-## ✨ Features
+## Description
 
-- **Proof of Work (PoW)**: Implements a mining process where a valid proof is found by solving a computational puzzle.
-- **Blockchain Integrity Validation**: Ensures that any tampered block is detected, reinforcing the immutability of the chain.
-- **Merkle Root Calculation**: Ensures transaction integrity by using a hierarchical hash structure.
-- **Blockchain Simulation**: Supports multiple peers contributing to the chain with simulated mining.
-- **Corruption Simulation**: Allows for testing the blockchain's response when a block is corrupted manually.
+Cette simulation démontre les concepts clés d'une blockchain :
+- **Proof of Work (PoW)** : Mécanisme de consensus par résolution de puzzles cryptographiques
+- **Intégrité de la chaîne** : Validation et détection de corruption des blocs
+- **Calcul de Merkle Root** : Structure hiérarchique des hash pour l'intégrité des transactions
+- **Système décentralisé** : Simulation d'interactions entre pairs (peers)
 
-## 📦 Requirements
+## Objectifs Pédagogiques
 
-Ensure you have Python 3 installed.
+Ce projet illustre :
+- Les mécanismes fondamentaux d'une blockchain
+- Le fonctionnement du Proof of Work
+- L'immutabilité et la validation des données
+- La détection de tentatives de corruption
+- Les principes des systèmes décentralisés
 
-## 🚀 Usage
+## Prérequis
 
-### Running the Script
+- Python 3.6+
+- Modules standard Python (hashlib, time, json)
 
-1. Clone or download the repository to your local machine.
-2. Run the script from the command line to simulate a blockchain and observe its behavior:
+## Structure du Projet
+
+```
+blockchain-simulation/
+├── blockchain.py           # Code principal de la simulation
+├── README.md              # Documentation
+└── [autres fichiers]      # Fichiers de support
+```
+
+## Utilisation
+
+### 1. Lancement de la simulation normale
 
 ```bash
 python blockchain.py
 ```
 
-You can also simulate corruption in the blockchain using the `-corrupt` argument, followed by the peer index, block index, and new proof:
+### 2. Test avec corruption manuelle
 
 ```bash
-python blockchain.py -corrupt <peer_index> <block_index> <new_proof>
+python blockchain.py -corrupt
 ```
 
-Replace `<peer_index>` with the index of the peer (0, 1, 2...), `<block_index>` with the index of the block to corrupt, and `<new_proof>` with a new proof value.
+Cette option permet de tester la capacité de la blockchain à détecter les tentatives de modification malveillante.
 
-### Example:
+## Fonctionnalités Implémentées
+
+### ✅ Mining et Proof of Work
+- Résolution de puzzles computationnels
+- Validation des blocs par consensus
+
+### ✅ Validation d'Intégrité
+- Détection automatique des blocs corrompus
+- Vérification de l'enchaînement des hash
+
+### ✅ Merkle Root
+- Calcul hiérarchique des hash de transactions
+- Vérification de l'intégrité des données
+
+### ✅ Simulation Multi-Peers
+- Interaction entre plusieurs nœuds
+- Démonstration de la décentralisation
+
+## Personnalisation
+
+Vous pouvez ajuster :
+- **Difficulté du PoW** : Modifier la complexité des puzzles
+- **Nombre de peers** : Étendre la simulation réseau
+- **Taille des blocs** : Adapter selon vos besoins d'apprentissage
+
+## Concepts Blockchain Démontrés
+
+1. **Immutabilité** : Une fois ajouté, un bloc ne peut être modifié sans casser la chaîne
+2. **Consensus** : Validation collective par Proof of Work
+3. **Transparence** : Tous les participants peuvent vérifier la validité
+4. **Décentralisation** : Aucun point de contrôle unique
+
+## Commandes Utiles
 
 ```bash
-python blockchain.py -corrupt 0 2 9999
+# Simulation standard
+python blockchain.py
+
+# Test de résistance à la corruption
+python blockchain.py -corrupt
+
+# Vérification de l'intégrité
+# (intégré dans la simulation)
 ```
 
-## 🖥️ Expected Output
+## Notes de Formation
 
-When executed, the script will display the blockchain structure before and after potential corruption, as well as whether the blockchain is still valid.
-
-### Sample Output:
-
-```json
-Blockchain before corruption:
-[
-    {
-        "index": 1,
-        "timestamp": "2025-03-19 09:59:39.462860",
-        "proof": 1,
-        "previous_hash": "0",
-        "miner": "Genesis",
-        "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
-    },
-    {
-        "index": 2,
-        "timestamp": "2025-03-19 09:59:41.103788",
-        "proof": 632238,
-        "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
-        "miner": "Peer A",
-        "current_hash": "920e9dacd99126a3de7c2277566ee799005d54b3ede4921c7f94776a014f2fe9"
-        "transactions": ["Genesis Block"],
-        "merkle_root": "abcdef12345..."
-    },
-    {
-        "index": 3,
-        "timestamp": "2025-03-02 10:24:10.789123",
-        "proof": 23456,
-        "previous_hash": "abcdef12345...",
-        "miner": "Peer A",
-        "transactions": ["Alice pays Bob 5 BTC"],
-        "merkle_root": "xyz12345..."
-    }
-]
-Corrupting blockchain for Peer A at block 2.
-
-Blockchain after corruption:
-[
-    {
-        "index": 1,
-        "timestamp": "2025-03-19 09:59:39.462860",
-        "proof": 1,
-        "previous_hash": "0",
-        "miner": "Genesis",
-        "current_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff"
-    },
-    {
-        "index": 2,
-        "timestamp": "2025-03-19 09:59:41.103788",
-        "proof": 12345,
-        "previous_hash": "859f948f6a87fa683a5f3347b058a6217970465cb1a7926cdb5e1afd156ce1ff",
-        "miner": "Peer A",
-        "current_hash": "03479147053e8f6192096c60632276fdc0b81168305e408891d0629dc40a36b5"
-        "transactions": ["Genesis Block"],
-        "merkle_root": "abcdef12345..."
-    },
-    {
-        "index": 3,
-        "timestamp": "2025-03-02 10:24:10.789123",
-        "proof": 9999,
-        "previous_hash": "abcdef12345...",
-        "miner": "Peer A",
-        "transactions": ["Tampered Transaction"],
-        "merkle_root": "tampered12345..."
-    }
-]
-Blockchain is invalid. Corruption detected at block(s): [2]
-Blockchain valid: False
-```
-
-## ⚙️ Customization
-
-- **Adjust Proof of Work Difficulty**: Modify the `difficulty` parameter in the `Blockchain` class to change the mining difficulty.
-- **Add More Peers**: Expand the list of peers in the simulation by adding more entries to the `peers` list in the script.
-
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
-
+Ce projet sert d'introduction pratique aux :
+- Technologies de registres distribués (DLT)
+- Cryptographie appliquée (hashing, validation)
+- Algorithmes de consensus
+- Architectures décentralisées
+- Détection d'anomalies dans les systèmes distribués
