@@ -1,23 +1,10 @@
 # Blockchain Simulation - Exercice de Formation
 
-Ce projet est un exercice de formation qui implémente une simulation éducative de blockchain en Python pour comprendre les principes fondamentaux de cette technologie.
-
-## Description
-
 Cette simulation démontre les concepts clés d'une blockchain :
 - **Proof of Work (PoW)** : Mécanisme de consensus par résolution de puzzles cryptographiques
 - **Intégrité de la chaîne** : Validation et détection de corruption des blocs
 - **Calcul de Merkle Root** : Structure hiérarchique des hash pour l'intégrité des transactions
 - **Système décentralisé** : Simulation d'interactions entre pairs (peers)
-
-## Objectifs Pédagogiques
-
-Ce projet illustre :
-- Les mécanismes fondamentaux d'une blockchain
-- Le fonctionnement du Proof of Work
-- L'immutabilité et la validation des données
-- La détection de tentatives de corruption
-- Les principes des systèmes décentralisés
 
 ## Prérequis
 
@@ -94,11 +81,3 @@ python blockchain.py -corrupt
 # (intégré dans la simulation)
 ```
 
-## Notes de Formation
-
-Ce projet sert d'introduction pratique aux :
-- Technologies de registres distribués (DLT)
-- Cryptographie appliquée (hashing, validation)
-- Algorithmes de consensus
-- Architectures décentralisées
-- Détection d'anomalies dans les systèmes distribués
